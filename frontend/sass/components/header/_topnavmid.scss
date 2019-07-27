@@ -1,0 +1,10 @@
+#middle-nav {
+  @include flexContainer();
+  li {
+    @include bolded();
+    a {
+      color: $black;
+    }
+  }
+  @include menuItemPadding(15px, "middle-nav-item");
+}

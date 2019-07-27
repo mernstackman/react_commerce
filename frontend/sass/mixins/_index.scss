@@ -1,0 +1,26 @@
+@mixin no-underline {
+  text-decoration: none;
+}
+
+@mixin bolded {
+  font-weight: bold;
+}
+
+@mixin flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin menuItemPadding($size, $classname) {
+  .#{$classname} {
+    padding: 0 $size;
+  }
+  .#{$classname}:first-child {
+    padding: 0 $size 0 0;
+  }
+  .#{$classname}:last-child {
+    padding: 0 0 0 $size;
+  }
+}
