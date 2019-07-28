@@ -23,6 +23,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "currency-flags": "git+https://github.com/transferwise/currency-flags.git",
     "dateformat": "^3.0.3",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",

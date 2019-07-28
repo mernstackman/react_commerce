@@ -40,7 +40,14 @@ module.exports = {
             }
           },
           // "css-loader",
-          "postcss-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                path: "postcss.config.js"
+              }
+            }
+          },
           "sass-loader"
         ]
         // the order should like this, or it will throw error on build

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import SignInUp from "./TopMenu/SignInUp";
 import TopNavMid from "./TopMenu/TopNavMid";
+import TopNavRight from "./TopMenu/TopNavRight";
 
 class TopMenu extends Component {
   render() {
@@ -15,13 +16,8 @@ class TopMenu extends Component {
           <TopNavMid />
         </nav>
 
-        <div id="top-nav-mid" className="top-menu-item">
-          <div id="currency" className="top-menu-item">
-            Currency
-          </div>
-          <div id="nav-bag" className="top-menu-item">
-            Bag
-          </div>
+        <div id="top-nav-right" className="top-menu-item">
+          <TopNavRight />
         </div>
       </nav>
     );

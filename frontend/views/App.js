@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import MainRouter from "./MainRouter";
 import { BrowserRouter } from "react-router-dom";
 import "./../sass/style.scss";
+import "./../css/currency-flags.css";
 
 class App extends Component {
   constructor(props) {
