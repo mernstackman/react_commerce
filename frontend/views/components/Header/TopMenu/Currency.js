@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-
-// import "currency-flags";
+import currency from "currency-symbol-map/map";
 
 export class Currency extends Component {
   render() {
     return (
-      <div id="currency">
-        <span className="currency-flag currency-flag-usd" />
+      <div id="currency" className="pointer">
+        <span className="currency-flag currency-flag-gbp" />{" "}
+        <span className="bolded">{currency.GBP} GBP</span>
       </div>
     );
   }

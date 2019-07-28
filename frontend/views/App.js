@@ -3,6 +3,7 @@ import MainRouter from "./MainRouter";
 import { BrowserRouter } from "react-router-dom";
 import "./../sass/style.scss";
 import "./../css/currency-flags.css";
+import icons_1 from "./../img/icons_2.png";
 
 class App extends Component {
   constructor(props) {

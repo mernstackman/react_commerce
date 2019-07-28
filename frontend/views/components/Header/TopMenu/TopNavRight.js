@@ -1,15 +1,14 @@
 import React, { Component, Fragment } from "react";
 
 import Currency from "./Currency";
+import ShoppingBag from "./ShoppingBag";
 
 class TopNavRight extends Component {
   render() {
     return (
       <Fragment>
         <Currency />
-        <div id="nav-bag" className="top-menu-item">
-          Bag
-        </div>
+        <ShoppingBag />
       </Fragment>
     );
   }

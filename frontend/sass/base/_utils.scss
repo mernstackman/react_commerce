@@ -9,3 +9,18 @@
 .pink {
   color: $pink;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.iconic {
+  background: url("../img/icons_2.png");
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.shopping-bag {
+  background-position: -152px -26px;
+}
