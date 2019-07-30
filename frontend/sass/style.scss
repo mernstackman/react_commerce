@@ -1,6 +1,9 @@
 $borderSmall: 1px solid;
-$pink: #ff0080;
 $black: #333333;
+$white: #ffffff;
+$pink: #ff0080;
+$red: #ff0040fa;
+
 @import "mixins/index", "base/index", "elements/index", "components/index";
 
 #app {
