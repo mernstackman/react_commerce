@@ -32,8 +32,7 @@ module.exports = {
     ]
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: "babel-loader"
@@ -41,12 +40,12 @@ module.exports = {
       {
         // Insert javascript into html template provided, in this case is index.html
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
+        use: [{
+          loader: "html-loader",
+          options: {
+            minimize: true
           }
-        ]
+        }]
       },
       {
         test: /\.(s*)css$/,
@@ -66,23 +65,33 @@ module.exports = {
               }
             }
           },
-          { loader: "sass-loader" }
+          {
+            loader: "sass-loader"
+          }
         ] // the order should like this, or it will throw error on build
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|bmp|tga)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "img/[name].[ext]"
-            }
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "img/[name].[ext]"
           }
-        ]
+        }]
+      },
+      {
+        test: /\.json$/,
+        use: [{
+          loader: "json-loader"
+        }]
       }
     ]
   },
   resolve: {
+    alias: {
+      frontend: path.resolve(__dirname, "./frontend"),
+      components: path.resolve(__dirname, "./frontend/views/components")
+    },
     extensions: [".scss", ".js", ".jsx"]
   },
   plugins: [

@@ -1,5 +1,5 @@
 {
-  "name": "react_commerce",
+  "name": "front",
   "version": "1.0.0",
   "description": "Starter kit for react front end development.",
   "main": "./dist/server.js",
@@ -9,7 +9,9 @@
     "prod": "rimraf dist && webpack --mode production --config webpack.config.server.js && webpack --config webpack.config.prod.js",
     "prod-start": "rimraf dist && webpack --mode production --config webpack.config.server.js && webpack --config webpack.config.prod.js && node ./dist/server.js",
     "dev-build": "rimraf dist && webpack --mode development --config webpack.config.server.js && webpack --config webpack.config.dev.js",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "mern",
@@ -23,8 +25,6 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
-    "currency-flags": "git+https://github.com/transferwise/currency-flags.git",
-    "currency-symbol-map": "^4.0.4",
     "dateformat": "^3.0.3",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
@@ -37,10 +37,17 @@
     "redux": "^4.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-knobs": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addon-notes": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/react": "^5.1.10",
     "autoprefixer": "^9.4.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -49,6 +56,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "json-loader": "^0.5.7",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -57,6 +65,8 @@
     "prettier": "^1.16.4",
     "prettier-webpack-plugin": "^1.2.0",
     "sass-loader": "^7.1.0",
+    "styled-components": "^4.3.2",
+    "styled-theming": "^2.2.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.29.5",

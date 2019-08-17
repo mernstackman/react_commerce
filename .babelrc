@@ -1,3 +1,16 @@
 {
-  "presets": ["env", "stage-2", "react"]
+  "presets": ["env", "stage-2", "react"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": false,
+        "minify": false,
+        "transpileTemplateLiterals": false,
+        "pure": false,
+        "displayName": true,
+        "fileName": true
+      }
+    ]
+  ]
 }

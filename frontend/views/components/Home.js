@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import BackRed from "./atoms/Icon/BackRed";
+import StarGold from "./atoms/Icon/StarGold";
 
 class Home extends Component {
   componentDidMount() {
@@ -8,7 +10,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>{""}</h1>
+        <h1>I am home!</h1>
+        <BackRed size="16" />
+        <StarGold />
       </div>
     );
   }

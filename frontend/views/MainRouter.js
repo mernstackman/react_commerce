@@ -1,20 +1,20 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Header from "./components/Header/Header";
+import Menu from "./components/Menu";
 import Home from "./components/Home";
 
 class MainRouter extends Component {
   render() {
     return (
-      <Fragment>
-        <Header />
+      <div>
+        <Menu />
         {/* Routes here */}
         <Switch>
-          <Route exact path="/" render={props => <Home {...props} title={"React Commerce"} />} />
+          <Route exact path="/" render={props => <Home {...props} title={"React Starter Kit"} />} />
         </Switch>
         {/* end Routes*/}
-      </Fragment>
+      </div>
     );
   }
 }
