@@ -12,6 +12,11 @@ const custom = require("../webpack.config.dev.js");
 
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(...custom.module.rules);
+  config.resolve.alias = {
+    frontend: path.resolve(__dirname, "./../frontend"),
+    components: path.resolve(__dirname, "./../frontend/views/components")
+  };
+  config.resolve.extensions.push(...custom.resolve.extensions);
   // config.plugins.push();
   return config;
 };

@@ -1,3 +1,3 @@
 # REACT COMMERCE
 
-And eCommerce platfor built with ReactJs
+An eCommerce platform built with ReactJs
