@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SizeIcon24, SearchIcon } from "frontend/views/.tokens";
+import { sizeIcon24, SearchIcon } from "frontend/views/.tokens";
 
 const Icon = styled.span`
   width: ${props => props.size}px;
@@ -9,7 +9,7 @@ const Icon = styled.span`
 `;
 
 Icon.defaultProps = {
-  size: SizeIcon24,
+  size: sizeIcon24,
   icon: SearchIcon
 };
 

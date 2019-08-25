@@ -45,7 +45,7 @@ const Button = styled.button`
           background: ${darken(0.1, colorBackgroundButtonSecondary)};
         }
         :active {
-          background: ${darken(0.2, colorBackgroundButtonSecondary)};
+          background: ${colorBackgroundButtonSecondary};
         }
       `;
     }
@@ -57,7 +57,7 @@ const Button = styled.button`
         background: ${darken(0.2, colorBackgroundButtonPrimary)};
       }
       :active {
-        background: ${lighten(0.1, colorBackgroundButtonPrimary)};
+        background: ${colorBackgroundButtonPrimary};
       }
     `;
   }}

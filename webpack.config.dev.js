@@ -14,7 +14,8 @@ module.exports = {
   target: "web",
   devtool: "#source-map",
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: "babel-loader"
@@ -22,9 +23,11 @@ module.exports = {
       {
         // Insert javascript into html template provided, in this case is index.html
         test: /\.html$/,
-        use: [{
-          loader: "html-loader"
-        }]
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
       },
       {
         test: /\.(s*)css$/,
@@ -51,18 +54,25 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|bmp|tga)$/,
-        use: [{
-          loader: "file-loader",
-          options: {
-            name: "img/[name].[ext]"
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "img/[name].[ext]"
+            }
+            /* query: {
+              name: "public/img/[name].[hash:8].[ext]" // for storybook
+            } */
           }
-        }]
+        ]
       },
       {
         test: /\.json$/,
-        use: [{
-          loader: "json-loader"
-        }]
+        use: [
+          {
+            loader: "json-loader"
+          }
+        ]
       }
     ]
   },
