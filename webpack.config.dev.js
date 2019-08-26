@@ -79,7 +79,8 @@ module.exports = {
   resolve: {
     alias: {
       frontend: path.resolve(__dirname, "./frontend"),
-      components: path.resolve(__dirname, "./frontend/views/components")
+      components: path.resolve(__dirname, "./frontend/views/components"),
+      atoms: path.resolve(__dirname, "./frontend/views/components/atoms")
     },
     extensions: [".js", ".jsx"]
   },
