@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import CheckBox from "./index";
+import CheckBox from "./CheckBox";
 
 class CheckBoxStory extends Component {
   state = {

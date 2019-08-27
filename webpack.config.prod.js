@@ -98,7 +98,9 @@ module.exports = {
     alias: {
       frontend: path.resolve(__dirname, "./frontend"),
       components: path.resolve(__dirname, "./frontend/views/components"),
-      atoms: path.resolve(__dirname, "./frontend/views/components/atoms")
+      atoms: path.resolve(__dirname, "./frontend/views/components/atoms"),
+      molecules: path.resolve(__dirname, "./frontend/views/components/molecules"),
+      organisms: path.resolve(__dirname, "./frontend/views/components/organisms")
     },
     extensions: [".scss", ".js", ".jsx"]
   },

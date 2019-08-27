@@ -18,12 +18,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <label>
-          <CheckBox onChange={this.handleChange} defaultChecked={this.state.checked} />
-        </label>
         <h1>I am home!</h1>
         <BackRed size="16" />
         <StarGold />
+        <CheckBox
+          onChange={this.handleChange}
+          defaultChecked={this.state.checked}
+          label="Checkbox"
+          gapWidth={3}
+        />
       </div>
     );
   }
