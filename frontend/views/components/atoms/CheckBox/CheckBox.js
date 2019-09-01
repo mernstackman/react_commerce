@@ -56,13 +56,13 @@ const CheckBoxStyle = styled.div`
 
 // Craft the styled checkbox component
 const CheckBox = props => {
-  const { value, id, width, height, padding, radius, bg, gapWidth, label, ...others } = props;
+  const { value, id, width, height, padding, radius, bg, label, ...others } = props;
   console.log(others);
   return (
     <Container>
       <HiddenCheckBox {...others} value={value} id={id} />
       <CheckBoxStyle width={width} height={height} padding={padding} bg={bg} radius={radius} />
-      {label && <Label gapWidth={gapWidth}>{label}</Label>}
+      {label && <Label>{label}</Label>}
     </Container>
   );
 };
@@ -70,7 +70,7 @@ const CheckBox = props => {
 CheckBox.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  gapWidth: PropTypes.number,
+  // labelGap: PropTypes.number,
   padding: PropTypes.string,
   radius: PropTypes.string,
   bg: PropTypes.string,

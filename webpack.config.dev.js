@@ -79,6 +79,7 @@ module.exports = {
   resolve: {
     alias: {
       frontend: path.resolve(__dirname, "./frontend"),
+      views: path.resolve(__dirname, "./frontend/views"),
       components: path.resolve(__dirname, "./frontend/views/components"),
       atoms: path.resolve(__dirname, "./frontend/views/components/atoms"),
       molecules: path.resolve(__dirname, "./frontend/views/components/molecules"),

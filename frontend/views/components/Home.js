@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import BackRed from "./atoms/Icon/BackRed";
 import StarGold from "./atoms/Icon/StarGold";
 import CheckBox from "atoms/CheckBox";
+import { connect } from "react-redux";
+import { setLabelGap } from "frontend/actions";
+
 class Home extends Component {
   state = {
     checked: false
@@ -9,10 +12,12 @@ class Home extends Component {
 
   componentDidMount() {
     document.title = this.props.title;
+    // this.props.dispatch(setLabelGap(this.props.labelGap));
+    this.props.setLabelGap(this.props.labelGap);
   }
 
   handleChange = () => {
-    this.setState({ checked: !this.state.checked });
+    // this.setState({ checked: !this.state.checked });
   };
 
   render() {
@@ -25,11 +30,20 @@ class Home extends Component {
           onChange={this.handleChange}
           defaultChecked={this.state.checked}
           label="Checkbox"
-          gapWidth={3}
+          labelGap={this.props.labelGap}
         />
       </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    labelGap: 3
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { setLabelGap }
+)(Home);
