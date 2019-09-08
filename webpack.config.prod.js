@@ -101,7 +101,8 @@ module.exports = {
       components: path.resolve(__dirname, "./frontend/views/components"),
       atoms: path.resolve(__dirname, "./frontend/views/components/atoms"),
       molecules: path.resolve(__dirname, "./frontend/views/components/molecules"),
-      organisms: path.resolve(__dirname, "./frontend/views/components/organisms")
+      organisms: path.resolve(__dirname, "./frontend/views/components/organisms"),
+      mixins: path.resolve(__dirname, "./frontend/mixins")
     },
     extensions: [".scss", ".js", ".jsx"]
   },

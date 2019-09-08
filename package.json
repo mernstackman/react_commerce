@@ -36,7 +36,8 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "style-object-to-css-string": "^1.0.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.10",

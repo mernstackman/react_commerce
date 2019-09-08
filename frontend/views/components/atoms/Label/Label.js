@@ -1,10 +1,21 @@
-import { connect } from "react-redux";
-import LabelBase from "./LabelBase";
+import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 
-const mapStateToProps = state => ({
-  labelGap: state.labelGap
-});
+// Label's text --> move this into standalone component
+const Label = styled.span`
+  display: inline-block;
+  cursor: pointer;
+  ${props => {
+    return css`
+      margin-left: ${props.labelGap || 5}px;
+      line-height: ${props.lineHeight || "20px"};
+    `;
+  }}
+`;
 
-// export default Label;
-const Label = connect(mapStateToProps)(LabelBase);
+Label.propTypes = {
+  labelGap: PropTypes.number,
+  lineHeight: PropTypes.string
+};
+
 export default Label;

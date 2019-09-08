@@ -1,81 +1,89 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { hideVisually } from "polished";
 import PropTypes from "prop-types";
-import checkmark from "frontend/icons/check-box.svg";
 import Label from "atoms/Label";
-import {
-  colorBackgroundCheckboxOn,
-  colorBackgroundCheckboxOff,
-  sizePaddingCheckbox,
-  sizeBorderRadiusCheckbox
-} from "frontend/views/.tokens";
-
-// Container --> better to be defined as a standalone component
-const Container = styled.label`
-  ${props => {
-    return css`
-      display: ${props.display || "inline-flex"};
-      margin: ${props.margin || 0};
-    `;
-  }}
-`;
+import Container from "atoms/Container";
+import CheckBoxStyle from "./CheckBoxStyle";
 
 // The actual input type checkbox
 const HiddenCheckBox = styled.input.attrs(props => ({
   type: "checkbox",
   value: props.value || "",
-  id: props.id || ""
+  id: props.id || "",
+  name: props.name,
+  onChange: props.onChange,
+  checked: props.checked
 }))`
-  ${hideVisually}
+  /* ${hideVisually} */
   display: none;
-`;
-
-// The displayed checkbox style created from div element
-const CheckBoxStyle = styled.div`
-  position: relative;
-  display: inline-block;
-  ${props => {
-    return css`
-      background-color: ${props.bg ? props.bg : colorBackgroundCheckboxOff};
-      width: ${props.width || 16}px;
-      height: ${props.height || 16}px;
-      padding: ${props.padding || sizePaddingCheckbox};
-      border-radius: ${props.radius || sizeBorderRadiusCheckbox};
-    `;
-  }}
-
-  input:checked + & {
-    background-color: ${colorBackgroundCheckboxOn};
-    background-image: url(${checkmark});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: ${props => parseInt(props.width || 16) - 2}px;
-  }
 `;
 
 // Craft the styled checkbox component
 const CheckBox = props => {
-  const { value, id, width, height, padding, radius, bg, label, ...others } = props;
-  console.log(others);
+  const {
+    value,
+    id,
+    name,
+    checked,
+    onChange,
+    width,
+    height,
+    padding,
+    radius,
+    bg,
+    label,
+    display,
+    margin,
+    containerStyle,
+    bgOn,
+    labelGap,
+    lineHeight,
+    ...others
+  } = props;
+  // console.log(others);
+
   return (
-    <Container>
-      <HiddenCheckBox {...others} value={value} id={id} />
-      <CheckBoxStyle width={width} height={height} padding={padding} bg={bg} radius={radius} />
-      {label && <Label>{label}</Label>}
+    <Container
+      as="label"
+      display={display || "inline-flex"}
+      margin={margin}
+      containerStyle={containerStyle}
+    >
+      <HiddenCheckBox onChange={onChange} checked={checked} value={value} id={id} name={name} />
+      <CheckBoxStyle
+        width={width}
+        height={height}
+        padding={padding}
+        bg={bg}
+        radius={radius}
+        bgOn={bgOn}
+      />
+      {label && (
+        <Label labelGap={labelGap} lineHeight={lineHeight}>
+          {label}
+        </Label>
+      )}
     </Container>
   );
 };
 
+/* Check the type of props passed to this component */
 CheckBox.propTypes = {
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  display: PropTypes.string,
+  margin: PropTypes.string,
+  containerStyle: PropTypes.object,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  id: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
-  // labelGap: PropTypes.number,
   padding: PropTypes.string,
   radius: PropTypes.string,
   bg: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  bgOn: PropTypes.string,
+  labelGap: PropTypes.number,
+  lineHeight: PropTypes.string
 };
 
 export default CheckBox;
