@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BackRed from "./atoms/Icon/BackRed";
 import StarGold from "./atoms/Icon/StarGold";
 import CheckBox from "atoms/CheckBox";
+import Radio from "atoms/Radio";
 import { connect } from "react-redux";
 // import { setLabelGap } from "frontend/actions";
 import Container from "atoms/Container";
@@ -21,7 +22,8 @@ const checkboxes = [
 
 class Home extends Component {
   state = {
-    checkedBox: new Map() // Save checked status in Map.
+    checkedBox: new Map(), // Save checked status in Map.
+    radioCheck: false
   };
 
   componentDidMount() {
@@ -38,6 +40,10 @@ class Home extends Component {
     this.setState({ checkedBox: this.state.checkedBox.set(targetBoxName, targetCheckedStatus) });
   };
 
+  radioChange = e => {
+    this.setState({ radioCheck: !this.state.radioCheck });
+  };
+
   render() {
     console.log(this.state.checkedBox);
     return (
@@ -49,24 +55,7 @@ class Home extends Component {
         <BackRed size="16" />
 
         <StarGold />
-        {/*         <CheckBox
-          key="1"
-          onChange={this.handleChange}
-          checked={this.state.checked}
-          label="Checkbox"
-          bgOn="red"
-          value="test_value"
-          radius="50%"
-        />
-
-        <CheckBox
-          key="2"
-          onChange={this.handleChange}
-          checked={this.state.checked}
-          label="Name"
-          margin="0 0 0 5px"
-        /> */}
-
+        <Radio label="Radio" onChange={this.radioChange} />
         {checkboxes.map((item, index) => (
           <CheckBox
             key={index}
@@ -75,9 +64,6 @@ class Home extends Component {
             value={item.value}
             label={item.label}
             name={item.name}
-            {...item.bgOn && { bgOn: item.bgOn }}
-            {...item.radius && { radius: item.radius }}
-            {...item.margin && { margin: item.margin }}
           />
         ))}
       </div>

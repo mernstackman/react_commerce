@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 26 Aug 2019 03:28:45 GMT
+ * Generated on Thu, 12 Sep 2019 00:34:20 GMT
  */
 
 export const colorCoreDark = "#2e2e2e";
@@ -37,6 +37,8 @@ export const colorBackgroundCheckboxOn = "#6eb2fb";
 export const colorBackgroundCheckboxOff = "#b4b4b4";
 export const colorBackgroundRadioOn = "#6eb2fb";
 export const colorBackgroundRadioOff = "#b4b4b4";
+export const colorBackgroundOn = "#6eb2fb";
+export const colorBackgroundOff = "#b4b4b4";
 export const sizeBorderWidthBase = "1px";
 export const sizeBorderWidthThin = "2px";
 export const sizeBorderWidthThick = "3px";
@@ -48,6 +50,7 @@ export const sizeBorderRadiusFull = "50%";
 export const sizeBorderRadiusNormal = "5px";
 export const sizeBorderRadiusButton = "50px";
 export const sizeBorderRadiusCheckbox = "3px";
+export const sizeBorderRadiusRadio = "50%";
 export const sizeFontH1 = "48px";
 export const sizeFontH2 = "24px";
 export const sizeFontH3 = "16px";
@@ -71,7 +74,9 @@ export const sizeLineHeightBodySmall = "200%";
 export const buttonBigPadding = "15px 90px";
 export const buttonMediumPadding = "10px 35px";
 export const buttonSmallPadding = "7px 25px";
-export const sizePaddingCheckbox = "1px";
+export const sizePaddingCheckbox = "2px";
+export const sizePaddingRadio = "2px";
+export const sizeBackgroundRadio = "25%";
 export const shadowBoxDefault = "0px 2px 0px 0px rgba(119,119,119,0.5)";
 export const shadowBoxHover = "0px 27px 40px 7px rgba(119,119,119,0.52)";
 export const typeBorderBase = "solid";

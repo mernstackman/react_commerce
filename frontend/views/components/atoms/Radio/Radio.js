@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { LabelBold } from "atoms/LabelText";
 import Container from "atoms/Container";
-import CheckBoxStyle from "./CheckBoxStyle";
+import RadioStyle from "./RadioStyle";
 import Input from "atoms/Input";
 
-// The actual input type checkbox
-const HiddenCheckBox = styled(Input)`
+// The actual input type Radio
+const HiddenRadio = styled(Input)`
   display: none;
 `;
 
-// Craft the styled checkbox component
-const CheckBox = props => {
+// Craft the styled Radio component
+const Radio = props => {
   const {
     value,
     id,
@@ -29,8 +29,8 @@ const CheckBox = props => {
 
   return (
     <Container as="label" display={display || "inline-flex"} containerStyle={containerStyle}>
-      <HiddenCheckBox
-        type="checkbox"
+      <HiddenRadio
+        type="radio"
         onChange={onChange}
         defaultChecked={checked}
         value={value}
@@ -41,10 +41,10 @@ const CheckBox = props => {
         ref={ref}
         readonly={readonly}
       />
-      <CheckBoxStyle />
+      <RadioStyle />
       {label && <LabelBold>{label}</LabelBold>}
     </Container>
   );
 };
 
-export default CheckBox;
+export default Radio;
