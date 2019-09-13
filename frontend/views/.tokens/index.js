@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 12 Sep 2019 00:34:20 GMT
+ * Generated on Fri, 13 Sep 2019 13:09:18 GMT
  */
 
 export const colorCoreDark = "#2e2e2e";
@@ -27,6 +27,8 @@ export const colorFontBodySmall = "#b4b4b4";
 export const colorFontLink = "#b4b4b4";
 export const colorFontBtnPrimary = "#ffffff";
 export const colorFontBtnSecondary = "#f62f5e";
+export const colorFontPrimary = "#ffffff";
+export const colorFontSecondary = "#f62f5e";
 export const colorBorderInputDefault = "#6c6c6c";
 export const colorBorderInputSuccess = "#7ed321";
 export const colorBorderColorSelected = "#6c6c6c";
@@ -37,6 +39,8 @@ export const colorBackgroundCheckboxOn = "#6eb2fb";
 export const colorBackgroundCheckboxOff = "#b4b4b4";
 export const colorBackgroundRadioOn = "#6eb2fb";
 export const colorBackgroundRadioOff = "#b4b4b4";
+export const colorBackgroundCircleRed = "#f62f5e";
+export const colorBackgroundCircleWhite = "#ffffff";
 export const colorBackgroundOn = "#6eb2fb";
 export const colorBackgroundOff = "#b4b4b4";
 export const sizeBorderWidthBase = "1px";

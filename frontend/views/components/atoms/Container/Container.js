@@ -16,6 +16,14 @@ const Container = styled.div`
     if (props.spreadEven) return SpreadEvenly;
   }}
 
+  ${props => {
+    if (props.square) {
+      return css`
+        width: ;
+      `;
+    }
+  }}
+
   ${props => props.containerStyle && styleToCss(containerStyle)}
 `;
 

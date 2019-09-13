@@ -6,6 +6,7 @@ import Radio from "atoms/Radio";
 import { connect } from "react-redux";
 // import { setLabelGap } from "frontend/actions";
 import Container from "atoms/Container";
+import { Number, NumberWhite } from "atoms/Number";
 
 const checkboxes = [
   { name: "box_one", checked: false, value: "first opt", label: "One", bgOn: "red", radius: "50%" },
@@ -66,6 +67,9 @@ class Home extends Component {
             name={item.name}
           />
         ))}
+        <Number size={16}>6</Number>
+        <NumberWhite>6</NumberWhite>
+        <Number>7</Number>
       </div>
     );
   }
